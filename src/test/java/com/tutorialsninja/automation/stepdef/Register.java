@@ -8,6 +8,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import com.tutorialsninja.automation.framework.*;
+import com.tutorialsninja.automation.pages.HeadersSection;
 
 public class Register {
 
@@ -21,6 +23,9 @@ public class Register {
 	@And("^I navigate to Account Registration page$")
 	public void i_navigate_to_Account_Registration_page()  {
 	   
+		Elements.click(HeadersSection.myAccountLink);
+		Elements.click(HeadersSection.register);
+		
 	}
 
 	@When("^I provide in all the bellow valid details$")
