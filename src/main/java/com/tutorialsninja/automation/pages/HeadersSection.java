@@ -15,7 +15,7 @@ public class HeadersSection {
 	}
 	public static HeadersSection elementofHeader =new HeadersSection();
 	
-	@FindBy(xpath="//span[text()=\"My Account\"]")
+	@FindBy(xpath="//span[contains(text(),'My Account')]") //span[contains(text(),'My Account')]
 	public static WebElement myAccountLink; 
 	
 	@FindBy(linkText="Register")

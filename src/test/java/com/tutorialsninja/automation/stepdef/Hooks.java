@@ -2,6 +2,8 @@ package com.tutorialsninja.automation.stepdef;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.config.PropertyFileReader;
@@ -23,14 +25,14 @@ public class Hooks {
 		Browser.startBrowser();
 		Browser.maximize();
 	}
-	@After
+	@AfterClass
 	public void closeBrowser(Scenario scenario){
 		if(scenario.isFailed()){
 			scenario.embed(Browser.takeScreenshot(), "image/png");
 		  }
 		log.info("Scenario Completed: "+scenario.getName());
 		log.info("Scenario Status is: "+scenario.getStatus());
-		Base.driver.quit();
+		Base.driver.close();
 	}
 
 }

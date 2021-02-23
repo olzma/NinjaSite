@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		//pretty used for featurefile displayed colored in console
 		features ={"classpath:FeatureFiles/Register.feature"},
 		glue ={"classpath:com.tutorialsninja.automation.stepdef"},
-		tags ="@Register"
+		tags ="@One, @Two"
 				//@RunOnlyForSmokeTest   @Books  @login @average @register
 				//there are standard default tags  @dev @wip @ignore
 		//@All and not @login and not @ignore and not @dev
